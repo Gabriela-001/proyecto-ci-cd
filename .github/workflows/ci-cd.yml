@@ -23,9 +23,9 @@ docker:
     - name: Clonar repositorio
       uses: actions/checkout@v4
     - name: Construir imagen Docker
-      run: docker build -t proyecto-ci-cd .
+      run: docker build -t proyecto-ci-cd . .
     - name: Verificar imagen
-      run: docker images proyecto-ci-cd
+      run: docker images proyecto-ci-cd .
 deploy:
   needs: docker
   runs-on: ubuntu-latest
